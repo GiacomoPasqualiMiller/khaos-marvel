@@ -21,6 +21,7 @@ module.exports = {
         'logo-light-mode': "url('../images/logo-light-mode.svg')",
         'curvy-dark-mode': "url('../images/bg-curvy-dark-mode.svg')",
         'curvy-light-mode': "url('../images/bg-curvy-light-mode.svg')",
+        'iron-man': "url('/images/iron-man.jpg')",
       }),
     },
   },
