@@ -1,20 +1,8 @@
 module.exports = {
   content: ['./*.html'],
+  darkMode: 'class',
   theme: {
-    screens: {
-      sm: '480px',
-      md: '768px',
-      lg: '976px',
-      xl: '1440px',
-    },
     extend: {
-      fontFamily: {
-        sans: ['Josefin Sans', 'sans-serif'],
-        alata: ['Alata'],
-      },
-      letterSpacing: {
-        widest: '.3em',
-      },
       colors: {
         darkBlue: 'hsl(217, 28%, 15%)',
         darkBlue1: 'hsl(218, 28%, 13%)',
@@ -44,4 +32,3 @@ module.exports = {
   },
   plugins: [],
 }
-
