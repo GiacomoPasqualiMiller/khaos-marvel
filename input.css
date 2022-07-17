@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.zoomContainer{
+  transition: 'transform 0.25s ease';
+  cursor: 'zoom-in';
+}
+
+.zoomImg{
+  transform: scale(3);
+  cursor: 'zoom-out';
+}
