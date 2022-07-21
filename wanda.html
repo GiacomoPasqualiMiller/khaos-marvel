@@ -6,11 +6,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/style.css" />
     <title>Simple Tailwind Starter</title>
+    <script>
+      const zoomWanda = function () {
+        imgWanda.classList.add("zoomWanda");
+        setInterval(function (params) {
+          popUp.classList.add("hidden");
+        }, 1000);
+      };
+    </script>
+    <script src="js/carcater-effects.js" defer></script>
   </head>
   <body>
+    <div
+      id="popup-modal"
+      tabindex="-1"
+      class="overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 md:inset-0 h-modal md:h-full justify-center items-center flex"
+      aria-modal="true"
+      role="dialog"
+    >
+      <div class="relative p-4 w-full max-w-md h-full my-auto">
+        <div
+          class="relative bg-white rounded-lg shadow-xl bg-gradient-to-l from-[#ae1a28] via-[#d01111] to-[#15070e]"
+        >
+          <div class="p-6 text-center">
+            <h3 class="mb-5 text-2xl font-bold text-white">
+              “I'm Sorry, But This Will Hurt.”
+            </h3>
+            <img
+              id="wanda"
+              src="images/card-wanda.png"
+              alt=""
+              height="300"
+              class="h-96 transition-all duration-1000 scroll-none"
+            />
+            <button
+              onclick="zoomWanda()"
+              data-modal-toggle="popup-modal"
+              type="button"
+              class="text-white bg-red-600 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 font-medium rounded-md text-sm inline-flex items-center px-5 py-2.5 text-center mr-2"
+            >
+              START
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
     <!-- Iron Man Section -->
     <section class="w-full flex justify-center">
-      <img src="images/wanda.jpg" alt="" height="500" class="flex w-full">
+      <img src="images/wanda.jpg" alt="" height="500" class="flex w-full" />
     </section>
   </body>
 </html>

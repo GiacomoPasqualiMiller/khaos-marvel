@@ -2,12 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
-.zoomContainer{
-  transition: 'transform 0.25s ease';
-  cursor: 'zoom-in';
+.zoomContainer {
+  transition: "transform 0.25s ease";
+  cursor: "zoom-in";
 }
 
-.zoomImg{
-  transform: scale(3);
-  cursor: 'zoom-out';
+.zoomIronMan {
+  @apply scale-[2.5] 
 }
+.zoomWanda {
+  @apply -translate-y-60 translate-x-60
+
+}
+.zoomCapitanMarvel {
+  @apply -translate-y-96;
+}
+.zoomBlackPanter {
+  @apply scale-[2.5] translate-y-10
+}
+

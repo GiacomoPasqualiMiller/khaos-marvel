@@ -1,0 +1,5 @@
+const imgIronMan = document.getElementById('iron')
+const imgWanda = document.getElementById('wanda')
+const imgBlack = document.getElementById('black-panter')
+const imgCap = document.getElementById('capitan-marvel')
+const popUp = document.getElementById('popup-modal')
