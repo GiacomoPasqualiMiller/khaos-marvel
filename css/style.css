@@ -542,6 +542,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   right: 2rem;
 }
 
+.left-2 {
+  left: 0.5rem;
+}
+
 .z-50 {
   z-index: 50;
 }
@@ -618,6 +622,22 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .h-96 {
   height: 24rem;
+}
+
+.h-\[\] {
+  height: ;
+}
+
+.h-\[200px\] {
+  height: 200px;
+}
+
+.h-\[400px\] {
+  height: 400px;
+}
+
+.h-\[300px\] {
+  height: 300px;
 }
 
 .max-h-\[600px\] {
@@ -749,6 +769,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-color: rgb(0 0 0 / 0.7);
 }
 
+.bg-black {
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+}
+
 .bg-gradient-to-r {
   background-image: linear-gradient(to right, var(--tw-gradient-stops));
 }
@@ -760,6 +785,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 .from-\[\#664EAE\] {
   --tw-gradient-from: #664EAE;
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgb(102 78 174 / 0));
+}
+
+.from-\[\#735ea0\] {
+  --tw-gradient-from: #735ea0;
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgb(115 94 160 / 0));
 }
 
 .from-\[\#C4A8FF\] {
@@ -775,21 +805,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .from-\[\#ae1a28\] {
   --tw-gradient-from: #ae1a28;
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgb(174 26 40 / 0));
-}
-
-.from-\[\#a28bd4\] {
-  --tw-gradient-from: #a28bd4;
-  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgb(162 139 212 / 0));
-}
-
-.from-\[\#a28bd455\] {
-  --tw-gradient-from: #a28bd455;
-  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgb(162 139 212 / 0));
-}
-
-.from-\[\#735ea0\] {
-  --tw-gradient-from: #735ea0;
-  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgb(115 94 160 / 0));
 }
 
 .via-\[\#1A0554\] {
@@ -808,6 +823,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-gradient-stops: var(--tw-gradient-from), #d01111, var(--tw-gradient-to, rgb(208 17 17 / 0));
 }
 
+.via-\[\#4b0908\] {
+  --tw-gradient-stops: var(--tw-gradient-from), #4b0908, var(--tw-gradient-to, rgb(75 9 8 / 0));
+}
+
 .to-\[\#0C0B13\] {
   --tw-gradient-to: #0C0B13;
 }
@@ -820,12 +839,20 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-gradient-to: #fbca03;
 }
 
+.to-\[\#b18d00\] {
+  --tw-gradient-to: #b18d00;
+}
+
 .to-\[\#15070e\] {
   --tw-gradient-to: #15070e;
 }
 
-.to-\[\#b18d00\] {
-  --tw-gradient-to: #b18d00;
+.to-\[\#a38200\] {
+  --tw-gradient-to: #a38200;
+}
+
+.fill-black {
+  fill: #000;
 }
 
 .object-cover {
@@ -941,11 +968,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   color: rgb(107 114 128 / var(--tw-text-opacity));
 }
 
-.text-black {
-  --tw-text-opacity: 1;
-  color: rgb(0 0 0 / var(--tw-text-opacity));
-}
-
 .text-gray-400 {
   --tw-text-opacity: 1;
   color: rgb(156 163 175 / var(--tw-text-opacity));
@@ -1031,6 +1053,26 @@ Ensure the default browser behavior of the `hidden` attribute.
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
+/* -----
+SVG Icons - svgicons.sparkk.fr
+----- */
+
+.svg-icon {
+  width: 1.25em;
+  height: 1.25em;
+}
+
+/* .svg-icon path,
+.svg-icon polygon,
+.svg-icon rect {
+  fill: #4691f6;
+} */
+
+.svg-icon circle {
+  stroke: #4691f6;
+  stroke-width: 1;
+}
+
 .hover\:scale-110:hover {
   --tw-scale-x: 1.1;
   --tw-scale-y: 1.1;
@@ -1073,6 +1115,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-color: rgb(0 0 0 / var(--tw-bg-opacity));
 }
 
+.dark .dark\:fill-white {
+  fill: #fff;
+}
+
 .dark .dark\:text-black {
   --tw-text-opacity: 1;
   color: rgb(0 0 0 / var(--tw-text-opacity));
@@ -1081,11 +1127,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .dark .dark\:text-gray-400 {
   --tw-text-opacity: 1;
   color: rgb(156 163 175 / var(--tw-text-opacity));
-}
-
-.dark .dark\:text-white {
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
 .dark .dark\:shadow-white {
@@ -1120,4 +1161,3 @@ Ensure the default browser behavior of the `hidden` attribute.
     height: 100%;
   }
 }
-

@@ -40,47 +40,77 @@
     <script src="js/carcater-effects.js" defer></script>
     <script src="js/script.js" defer></script>
   </head>
-  <body class="dark:bg-black">
-    <!-- Header -->
-    <header class="container mx-auto relative">
-      <section id="header" class="flex w-full justify-center flex-wrap p-2.5">
-        <div class="flex w-full justify-center align-baseline dark:bg-black gap-2">
-          <h1 class="text-lg font-bold text-center p-1 rounded-md text-white dark:text-black bg-red-600">KHAOS</h1>
-          <h1 class="text-lg font-bold text-center p-1 rounded-md text-white dark:text-black bg-red-600">MARVEL</h1>   
-        </div>
-        <button id="theme-toggle" class="absolute top-2 right-2 text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outlink-none focus:ring-4 focus:ring-gray-700 dark:focus:ring-gray-200 rounded-lg p-2.5 animate-pulse">
-            <!-- Dark SVG Icon -->
+  <body class="dark:bg-black">       
+        <!-- Header -->
+        <header class="container mx-auto relative">
+          <section id="header" class="flex w-full justify-center flex-wrap p-2.5">
+            <div class="flex w-full justify-center align-baseline dark:bg-black gap-2">
+              <h1 class="text-lg font-bold text-center p-1 rounded-md text-white dark:text-black bg-red-600">KHAOS</h1>
+              <h1 class="text-lg font-bold text-center p-1 rounded-md text-white dark:text-black bg-red-600">MARVEL</h1>   
+            </div>
+            <div class="w-30 h-30 absolute top-2 left-2">
+              <!-- Back Button  -->
+              <button onclick="history.back()" id="back-btn" class=" hover:bg-gray-100 dark:hover:bg-gray-700 focus:outlink-none focus:ring-4 focus:ring-gray-700 dark:focus:ring-gray-200 rounded-lg p-2.5 ">
+                <svg class="svg-icon fill-black dark:fill-white" viewBox="0 0 20 20">
+                  <path d="M11.739,13.962c-0.087,0.086-0.199,0.131-0.312,0.131c-0.112,0-0.226-0.045-0.312-0.131l-3.738-3.736c-0.173-0.173-0.173-0.454,0-0.626l3.559-3.562c0.173-0.175,0.454-0.173,0.626,0c0.173,0.172,0.173,0.451,0,0.624l-3.248,3.25l3.425,3.426C11.911,13.511,11.911,13.789,11.739,13.962 M18.406,10c0,4.644-3.763,8.406-8.406,8.406S1.594,14.644,1.594,10S5.356,1.594,10,1.594S18.406,5.356,18.406,10 M17.521,10c0-4.148-3.373-7.521-7.521-7.521c-4.148,0-7.521,3.374-7.521,7.521c0,4.148,3.374,7.521,7.521,7.521C14.147,17.521,17.521,14.148,17.521,10"></path>
+                </svg>
+            </button>
+            </div>
+            <div class="bg-black w-full absolute top-2 left-2 z-100">
+
+            </div>
+
+
+
+            <!-- Dark Mode Button  -->
+            <button id="theme-toggle" class="absolute top-2 right-2 text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outlink-none focus:ring-4 focus:ring-gray-700 dark:focus:ring-gray-200 rounded-lg p-2.5">
+                <!-- Dark SVG Icon -->
+                <svg
+                id="theme-toggle-dark-icon"
+                class="w-5 h-5 hidden"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+                >
+                <path
+                d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"
+                ></path>
+              </svg>
+              
+              <!-- Light SVG Icon -->
+              <svg
+              id="theme-toggle-light-icon"
+              class="w-5 h-5 hidden"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+              >
+              <path
+                d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                ></path>
+              </svg>
+            </button>
+            <!-- Light SVG Icon -->
             <svg
-            id="theme-toggle-dark-icon"
-            class="w-5 h-5 hidden animate-pulse"
+            id="theme-toggle-light-icon"
+            class="w-5 h-5 hidden "
             fill="currentColor"
             viewBox="0 0 20 20"
             xmlns="http://www.w3.org/2000/svg"
             >
             <path
-            d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"
-            ></path>
-          </svg>
-          
-          <!-- Light SVG Icon -->
-          <svg
-          id="theme-toggle-light-icon"
-          class="w-5 h-5 hidden animate-pulse"
-          fill="currentColor"
-          viewBox="0 0 20 20"
-          xmlns="http://www.w3.org/2000/svg"
-          >
-          <path
-            d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
-            fill-rule="evenodd"
-            clip-rule="evenodd"
-            ></path>
-          </svg>
-        </button>
-      </div>
-
-    </section>
-  </header>
+              d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              ></path>
+            </svg>
+          </button>
+          </div>
+    
+        </section>
+      </header>
     <!-- Pop up Section -->
     <div
       id="popup-modal"
