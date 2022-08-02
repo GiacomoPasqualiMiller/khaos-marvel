@@ -27,6 +27,12 @@
         }, 1000);
       };
       
+      window.onload = function () {
+        imgCap.classList.add("zoomCapitanMarvel");
+          setInterval(function (params) {
+            popUp.classList.add("hidden");
+          }, 2000);
+        };
 
       //Zoom Image
       function showModal(src) {
@@ -113,17 +119,17 @@
             </section>
           </header>
 
-
+<!-- Pop up Section -->
     <div
       id="popup-modal"
       tabindex="-1"
-      class="overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 md:inset-0 h-modal md:h-full justify-center items-center flex"
+      class="overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 md:inset-0 h-modal md:h-full justify-center items-center flex h-full"
       aria-modal="true"
       role="dialog"
     >
-      <div class="relative p-4 w-full max-w-md h-full my-auto">
+      <div class="relative p-0 w-full max-w-md h-full my-auto">
         <div
-          class="relative bg-white rounded-lg shadow-xl bg-gradient-to-l from-[#4b0908] via-[#aa0505] to-[#fbca03]"
+          class="relative h-full bg-white rounded-lg shadow-xl bg-gradient-to-l from-[#CC4224]  to-[#2A75B3]"
         >
           <div class="p-6 text-center">
             <h3 class="mb-5 text-2xl font-bold text-white">"My name is Carol."</h3>
@@ -133,14 +139,6 @@
               alt=""
               class="h-[400px] mx-auto transition-all duration-1000 scroll-none"
             />
-            <button
-              onclick="imgZooming()"
-              data-modal-toggle="popup-modal"
-              type="button"
-              class="text-white bg-red-600 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 font-medium rounded-md text-sm inline-flex items-center px-5 py-2.5 text-center mr-2"
-            >
-              START
-            </button>
           </div>
         </div>
       </div>

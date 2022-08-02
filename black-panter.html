@@ -19,13 +19,13 @@
         document.documentElement.classList.remove('dark');
       }
 
-      //Image Effect
-      const imgZooming = function () {
-        imgBlack.classList.add("zoomBlackPanter");
-        setInterval(function (params) {
-          popUp.classList.add("hidden");
-        }, 1000);
-      };
+      //Auto Image Effect
+      window.onload = function () {
+          imgBlack.classList.add("zoomBlackPanter");
+          setInterval(function (params) {
+            popUp.classList.add("hidden");
+          }, 2000);
+        };
 
       //Zoom Image
       function showModal(src) {
@@ -134,14 +134,7 @@
               alt=""
               class="transition-all duration-1000 scroll-none"
             />
-            <button
-              onclick="imgZooming()"
-              data-modal-toggle="popup-modal"
-              type="button"
-              class="text-white bg-red-600 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 font-medium rounded-md text-sm inline-flex items-center px-5 py-2.5 text-center mr-2"
-            >
-              START
-            </button>
+            
           </div>
         </div>
       </div>

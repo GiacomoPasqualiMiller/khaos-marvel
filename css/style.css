@@ -518,6 +518,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   top: 0.5rem;
 }
 
+.left-2 {
+  left: 0.5rem;
+}
+
 .right-2 {
   right: 0.5rem;
 }
@@ -540,10 +544,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .right-8 {
   right: 2rem;
-}
-
-.left-2 {
-  left: 0.5rem;
 }
 
 .z-50 {
@@ -588,6 +588,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-bottom: 2.5rem;
 }
 
+.mt-40 {
+  margin-top: 10rem;
+}
+
+.mt-20 {
+  margin-top: 5rem;
+}
+
 .flex {
   display: flex;
 }
@@ -616,32 +624,40 @@ Ensure the default browser behavior of the `hidden` attribute.
   height: 100vh;
 }
 
+.h-\[400px\] {
+  height: 400px;
+}
+
 .h-28 {
   height: 7rem;
+}
+
+.h-10 {
+  height: 2.5rem;
+}
+
+.h-\[275px\] {
+  height: 275px;
 }
 
 .h-96 {
   height: 24rem;
 }
 
-.h-\[\] {
-  height: ;
-}
-
-.h-\[200px\] {
-  height: 200px;
-}
-
-.h-\[400px\] {
-  height: 400px;
-}
-
-.h-\[300px\] {
-  height: 300px;
-}
-
 .max-h-\[600px\] {
   max-height: 600px;
+}
+
+.max-h-\[4500px\] {
+  max-height: 4500px;
+}
+
+.max-h-\[450px\] {
+  max-height: 450px;
+}
+
+.max-h-\[500px\] {
+  max-height: 500px;
 }
 
 .w-full {
@@ -662,6 +678,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .w-1\/2 {
   width: 50%;
+}
+
+.w-10 {
+  width: 2.5rem;
 }
 
 .max-w-md {
@@ -735,6 +755,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-bottom: calc(1.5rem * var(--tw-space-y-reverse));
 }
 
+.space-x-2 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 0;
+  margin-right: calc(0.5rem * var(--tw-space-x-reverse));
+  margin-left: calc(0.5rem * calc(1 - var(--tw-space-x-reverse)));
+}
+
 .overflow-y-auto {
   overflow-y: auto;
 }
@@ -755,9 +781,18 @@ Ensure the default browser behavior of the `hidden` attribute.
   border-radius: 0.75rem;
 }
 
+.rounded-full {
+  border-radius: 9999px;
+}
+
 .bg-red-600 {
   --tw-bg-opacity: 1;
   background-color: rgb(220 38 38 / var(--tw-bg-opacity));
+}
+
+.bg-black {
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
 }
 
 .bg-white {
@@ -769,9 +804,9 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-color: rgb(0 0 0 / 0.7);
 }
 
-.bg-black {
+.bg-gray-500 {
   --tw-bg-opacity: 1;
-  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+  background-color: rgb(107 114 128 / var(--tw-bg-opacity));
 }
 
 .bg-gradient-to-r {
@@ -807,6 +842,26 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgb(174 26 40 / 0));
 }
 
+.from-\[\] {
+  --tw-gradient-from: ;
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgb(255 255 255 / 0));
+}
+
+.from-\[2A75B3\] {
+  --tw-gradient-from: 2A75B3;
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgb(255 255 255 / 0));
+}
+
+.from-\[\#2A75B3\] {
+  --tw-gradient-from: #2A75B3;
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgb(42 117 179 / 0));
+}
+
+.from-\[\#CC4224\] {
+  --tw-gradient-from: #CC4224;
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgb(204 66 36 / 0));
+}
+
 .via-\[\#1A0554\] {
   --tw-gradient-stops: var(--tw-gradient-from), #1A0554, var(--tw-gradient-to, rgb(26 5 84 / 0));
 }
@@ -823,8 +878,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-gradient-stops: var(--tw-gradient-from), #d01111, var(--tw-gradient-to, rgb(208 17 17 / 0));
 }
 
-.via-\[\#4b0908\] {
-  --tw-gradient-stops: var(--tw-gradient-from), #4b0908, var(--tw-gradient-to, rgb(75 9 8 / 0));
+.via-\[\#F3D403\] {
+  --tw-gradient-stops: var(--tw-gradient-from), #F3D403, var(--tw-gradient-to, rgb(243 212 3 / 0));
 }
 
 .to-\[\#0C0B13\] {
@@ -839,6 +894,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-gradient-to: #fbca03;
 }
 
+.to-\[\#a38200\] {
+  --tw-gradient-to: #a38200;
+}
+
 .to-\[\#b18d00\] {
   --tw-gradient-to: #b18d00;
 }
@@ -847,8 +906,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-gradient-to: #15070e;
 }
 
-.to-\[\#a38200\] {
-  --tw-gradient-to: #a38200;
+.to-\[\#2A75B3\] {
+  --tw-gradient-to: #2A75B3;
 }
 
 .fill-black {
@@ -884,6 +943,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding: 0.75rem;
 }
 
+.p-0 {
+  padding: 0px;
+}
+
 .p-20 {
   padding: 5rem;
 }
@@ -906,6 +969,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 .px-4 {
   padding-left: 1rem;
   padding-right: 1rem;
+}
+
+.px-2 {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
 }
 
 .text-center {
@@ -973,6 +1041,15 @@ Ensure the default browser behavior of the `hidden` attribute.
   color: rgb(156 163 175 / var(--tw-text-opacity));
 }
 
+.underline {
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+}
+
+.underline-offset-1 {
+  text-underline-offset: 1px;
+}
+
 .shadow-xl {
   --tw-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);
@@ -982,6 +1059,12 @@ Ensure the default browser behavior of the `hidden` attribute.
 .shadow-md {
   --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.shadow-lg {
+  --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
@@ -1007,6 +1090,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .shadow-purple-600 {
   --tw-shadow-color: #9333ea;
+  --tw-shadow: var(--tw-shadow-colored);
+}
+
+.shadow-gray-400 {
+  --tw-shadow-color: #9ca3af;
   --tw-shadow: var(--tw-shadow-colored);
 }
 

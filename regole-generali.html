@@ -5,15 +5,246 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/style.css" />
-    <title>Simple Tailwind Starter</title>
+    <title>Regole Generali</title>
+    <link rel="icon" type="image/x-icon" href="/images/icon.png">
+    <script>
+      //Dark mode
+      if (
+        localStorage.getItem('color-theme') === 'dark' ||
+        (!('color-theme' in localStorage) &&
+          window.matchMedia('(prefers-color-scheme: dark)').matches)
+      ) {
+        document.documentElement.classList.add('dark');
+      } else {
+        document.documentElement.classList.remove('dark');
+      }
+
+      //Image Effect
+      const imgZooming = function () {
+        imgBlack.classList.add("zoomBlackPanter");
+        setInterval(function (params) {
+          popUp.classList.add("hidden");
+        }, 1000);
+      };
+
+      //Zoom Image
+      function showModal(src) {
+          console.log(modal)
+          var modal = document.getElementById("modal");
+          modal.classList.remove('hidden');
+          modalImg.src = src;
+      }
+
+      function closeModal() {
+          modal.classList.add('hidden');
+      }
+    </script>
+    <script src="js/script.js" defer></script>
+    <script src="js/carcater-effects.js" defer></script>
   </head>
-  <body>
-    <!-- Iron Man Section -->
-    <section class="w-full flex justify-center flex-wrap">
-        <img src="../images/1.jpg" alt="" height="500" class="flex w-full">
-        <img src="../images/2.jpg" alt="" height="500" class="flex w-full">
-        <img src="../images/3.jpg" alt="" height="500" class="flex w-full">
-        <img src="../images/4.jpg" alt="" height="500" class="flex w-full">
-      </section>
-  </body>
+  <body class="dark:bg-black">
+    <!-- Header -->
+    <header class="container mx-auto relative">
+      <section id="header" class="flex w-full justify-center flex-wrap p-2.5">
+        <div class="flex w-full justify-center align-baseline dark:bg-black gap-2">
+          <h1 class="text-lg font-bold text-center p-1 rounded-md text-white dark:text-black bg-red-600">KHAOS</h1>
+          <h1 class="text-lg font-bold text-center p-1 rounded-md text-white dark:text-black bg-red-600">MARVEL</h1>   
+        </div>
+        <div class="w-30 h-30 absolute top-2 left-2">
+          <!-- Back Button  -->
+          <button onclick="history.back()" id="back-btn" class=" hover:bg-gray-100 dark:hover:bg-gray-700 focus:outlink-none focus:ring-4 focus:ring-gray-700 dark:focus:ring-gray-200 rounded-lg p-2.5 ">
+            <svg class="svg-icon fill-black dark:fill-white" viewBox="0 0 20 20">
+              <path d="M11.739,13.962c-0.087,0.086-0.199,0.131-0.312,0.131c-0.112,0-0.226-0.045-0.312-0.131l-3.738-3.736c-0.173-0.173-0.173-0.454,0-0.626l3.559-3.562c0.173-0.175,0.454-0.173,0.626,0c0.173,0.172,0.173,0.451,0,0.624l-3.248,3.25l3.425,3.426C11.911,13.511,11.911,13.789,11.739,13.962 M18.406,10c0,4.644-3.763,8.406-8.406,8.406S1.594,14.644,1.594,10S5.356,1.594,10,1.594S18.406,5.356,18.406,10 M17.521,10c0-4.148-3.373-7.521-7.521-7.521c-4.148,0-7.521,3.374-7.521,7.521c0,4.148,3.374,7.521,7.521,7.521C14.147,17.521,17.521,14.148,17.521,10"></path>
+            </svg>
+        </button>
+        </div>
+        <div class="bg-black w-full absolute top-2 left-2 z-100">
+
+        </div>
+
+
+
+        <!-- Dark Mode Button  -->
+        <button id="theme-toggle" class="absolute top-2 right-2 text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outlink-none focus:ring-4 focus:ring-gray-700 dark:focus:ring-gray-200 rounded-lg p-2.5">
+            <!-- Dark SVG Icon -->
+            <svg
+            id="theme-toggle-dark-icon"
+            class="w-5 h-5 hidden"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
+            >
+            <path
+            d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"
+            ></path>
+          </svg>
+          
+          <!-- Light SVG Icon -->
+          <svg
+          id="theme-toggle-light-icon"
+          class="w-5 h-5 hidden"
+          fill="currentColor"
+          viewBox="0 0 20 20"
+          xmlns="http://www.w3.org/2000/svg"
+          >
+          <path
+            d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            ></path>
+          </svg>
+        </button>
+        <!-- Light SVG Icon -->
+        <svg
+        id="theme-toggle-light-icon"
+        class="w-5 h-5 hidden "
+        fill="currentColor"
+        viewBox="0 0 20 20"
+        xmlns="http://www.w3.org/2000/svg"
+        >
+        <path
+          d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+          fill-rule="evenodd"
+          clip-rule="evenodd"
+          ></path>
+        </svg>
+      </button>
+      </div>
+
+    </section>
+  </header>
+    <!-- Card Section -->
+    <section class="w-full flex px-2 space-x-2">
+      <div class="w-1/2 flex justify-center flex-wrap mt-6">
+
+        <!-- Title Container -->
+        <div
+        class="flex flex-col justify-center items-center space-y-6 p-1 w-10 h-10 rounded-full bg-gray-500 shadow-lg shadow-gray-400 mb-4"
+        >
+        <div
+          class="flex flex-col justify-center items-center p-1 space-y-6 shadow-gray-400"
+        >
+          <p class="text-center text-xl text-white">1</p>
+        </div>
+      </div>
+      <!-- Image Container -->
+      <div
+        class="flex flex-col justify-center items-center w-full space-y-6 p-1 rounded-xl bg-gray-500 shadow-lg shadow-gray-400"
+      >
+        <div
+          class="flex flex-col justify-center items-center w-full space-y-6 rounded-xl"
+          >
+          <img
+          src="images/1.jpg"
+          alt=""
+          class="flex h-[275px] w-full rounded-xl animate-pulse"
+          onclick="showModal('images/1.jpg')"
+          />
+        </div>
+      </div>
+    </div>
+      <div class="w-1/2 flex justify-center flex-wrap mt-6">
+
+        <!-- Title Container -->
+        <div
+        class="flex flex-col justify-center items-center space-y-6 p-1 w-10 h-10 rounded-full bg-gray-500 shadow-lg shadow-gray-400 mb-4"
+        >
+        <div
+          class="flex flex-col justify-center items-center p-1 space-y-6 shadow-gray-400"
+        >
+          <p class="text-center text-xl text-white">2</p>
+        </div>
+      </div>
+      <!-- Image Container -->
+      <div
+        class="flex flex-col justify-center items-center w-full space-y-6 p-1 rounded-xl bg-gray-500 shadow-lg shadow-gray-400"
+      >
+        <div
+          class="flex flex-col justify-center items-center w-full space-y-6 rounded-xl"
+          >
+          <img
+          src="images/2.jpg"
+          alt=""
+          height="500"
+          class="w-full rounded-xl animate-pulse flex h-[275px]"
+          onclick="showModal('images/2.jpg')"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+      
+
+  <section class="w-full flex  px-2 space-x-2">
+  <div class="w-1/2 flex justify-center flex-wrap mt-6">
+
+    <!-- Title Container -->
+    <div
+    class="flex flex-col justify-center items-center space-y-6 p-1 w-10 h-10 rounded-full bg-gray-500 shadow-lg shadow-gray-400 mb-4"
+    >
+    <div
+      class="flex flex-col justify-center items-center p-1 space-y-6 shadow-gray-400"
+    >
+      <p class="text-center text-xl text-white">3</p>
+    </div>
+  </div>
+  <!-- Image Container -->
+  <div
+    class="flex flex-col justify-center items-center w-full space-y-6 p-1 rounded-xl bg-gray-500 shadow-lg shadow-gray-400"
+  >
+    <div
+      class="flex flex-col justify-center items-center w-full space-y-6 rounded-xl"
+      >
+      <img
+      src="images/3.jpg"
+      alt=""
+      height="500"
+      class="w-full rounded-xl animate-pulse flex h-[275px]"
+      onclick="showModal('images/3.jpg')"
+      />
+    </div>
+  </div>
+</div>
+  <div class="w-1/2 flex justify-center flex-wrap mt-6">
+
+    <!-- Title Container -->
+    <div
+    class="flex flex-col justify-center items-center space-y-6 p-1 w-10 h-10 rounded-full bg-gray-500 shadow-lg shadow-gray-400 mb-4"
+    >
+    <div
+      class="flex flex-col justify-center items-center p-1 space-y-6 shadow-gray-400"
+    >
+      <p class="text-center text-xl text-white">4</p>
+    </div>
+  </div>
+  <!-- Image Container -->
+  <div
+    class="flex flex-col justify-center items-center w-full space-y-6 p-1 rounded-xl bg-gray-500 shadow-lg shadow-gray-400"
+  >
+    <div
+      class="flex flex-col justify-center items-center w-full space-y-6 rounded-xl"
+      >
+      <img
+      src="images/4.jpg"
+      alt=""
+      height="500"
+      class="w-full rounded-xl animate-pulse flex h-[275px]"
+      onclick="showModal('images/4.jpg')"
+      />
+    </div>
+  </div>
+</div>
+</section>
+<!-- The Modal -->
+<div id="modal"
+class="hidden fixed top-0 left-0 z-80 w-screen h-screen bg-black/70 flex justify-center items-center">
+
+<!-- The close button -->
+<a class="fixed z-90 top-6 right-8 text-white text-5xl font-bold" href="javascript:void(0)"
+    onclick="closeModal()">&times;</a>
+
+<!-- A big image will be displayed here -->
+<img id="modal-img" class="max-h-[500px] object-cover" />
+</div>
+</body>
 </html>
